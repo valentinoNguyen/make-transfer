@@ -1,0 +1,45 @@
+@import "~bootstrap/scss/bootstrap";
+
+$primary-blue: #00a1e0;
+$small-padding: 0.6rem;
+$base-padding: 1rem;
+
+
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+input:placeholder-shown {
+  font-style: italic;
+}
+
+.bb-card {
+  border-radius: 10px;
+  overflow: hidden;
+
+  .bb-card-header {
+    background-color: $primary-blue;
+    color: white;
+    padding: $small-padding;
+    height: 3rem;
+  }
+
+  .bb-card-content {
+    padding: $base-padding;
+    background-color: white;
+    height: calc(100% - 3rem);
+  }
+}
+
+.merchant-details {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-control.is-invalid{
+  background-image: none;
+}
+
+

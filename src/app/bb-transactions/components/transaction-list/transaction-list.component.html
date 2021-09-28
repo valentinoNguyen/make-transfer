@@ -1,0 +1,27 @@
+<div class="bb-card">
+  <div class="bb-card-header">
+    <i class="lni lni-list"></i>
+    <span class="ml-2">Transactions <b>List</b></span>
+  </div>
+  <div class="bb-card-content">
+    <app-filter (inputChange)="searchChange($event)"></app-filter>
+    
+    <div class="transaction-items">
+      <ng-container *ngFor="let transaction of (filteredTransactions$ | async); last as isLast">
+        <app-transaction-item>
+          <div data-test-hook="transactionColour" class="transaction-colour" [style.background-color]="transaction.categoryCode"></div>
+          <span data-test-hook="transactionDate" class="transaction-date">{{transaction.dates.valueDate | date:'MMM. d'}}</span>
+          <span data-test-hook="transactionMerchantName" class="merchent-name"><b>{{transaction.merchant.name}}</b></span>
+          <span data-test-hook="transactionType" class="type">{{transaction.transaction.type}}</span>
+          <span data-test-hook="transactionAmount" class="amount" 
+            [class.negative]="transaction.transaction.amountCurrency.amount < 0">
+            {{transaction.transaction.amountCurrency.amount | currency: transaction.transaction.amountCurrency.currencyCode}}
+          </span>
+        </app-transaction-item>
+
+        <div *ngIf="!isLast" class="divider"></div>
+      </ng-container>
+    </div>
+    
+  </div>
+</div>

@@ -4,7 +4,7 @@ export function balanceMinExceedValidator(minBalance: number, currentBalance: nu
   return (control: AbstractControl): ValidationErrors | null => {
     const currentValue = Number(control.value);
 
-    if (isNaN(currentValue) || currentValue === null || control.invalid) {
+    if (isNaN(currentValue) || control.invalid) {
       return null;
     }
 

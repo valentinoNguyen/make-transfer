@@ -58,10 +58,10 @@ app-transaction-item {
 }
 
 .amount {
-  color: #12a580;
+  color: $primary;
 
   &.negative {
-    color: #d51271;
+    color: $warning;
   }
 }
 

@@ -17,6 +17,7 @@ export class TransactionListComponent {
       sortedTransactions.sort((a, b) =>
         new Date(b.dates.valueDate).getTime() - new Date(a.dates.valueDate).getTime()
       );
+
       this.transactionsSubject$.next(sortedTransactions);
     }
   }

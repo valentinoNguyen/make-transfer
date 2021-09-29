@@ -5,7 +5,7 @@ import { TransactionApiService } from '../../services/transaction-api.service';
 import { Account, Transaction, TransferInfo } from '../../models';
 
 @Component({
-  selector: 'bb-transaction-screen',
+  selector: 'app-transaction-screen',
   templateUrl: './transaction-screen.component.html',
   styleUrls: ['./transaction-screen.component.scss']
 })

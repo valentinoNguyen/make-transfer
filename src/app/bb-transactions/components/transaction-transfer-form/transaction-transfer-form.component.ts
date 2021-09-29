@@ -8,7 +8,7 @@ import { TransferInfo } from '../../models/transfer-info.model';
 import { balanceMinExceedValidator } from '../../validators';
 
 @Component({
-  selector: 'bb-transaction-transfer-form',
+  selector: 'app-transaction-transfer-form',
   templateUrl: './transaction-transfer-form.component.html',
   styleUrls: ['./transaction-transfer-form.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush

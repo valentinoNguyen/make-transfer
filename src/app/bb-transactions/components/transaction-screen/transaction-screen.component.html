@@ -1,11 +1,11 @@
 <div class="transaction-container d-flex justify-content-center">
-  <bb-transaction-transfer-form
+  <app-transaction-transfer-form
     [currentAccount]="currentAccount$ | async"
     (makeTransfer)="makeTransfer($event)"
     >
-  </bb-transaction-transfer-form>
+  </app-transaction-transfer-form>
   <div class="gap"></div>
-  <bb-transaction-list
+  <app-transaction-list
     [transactions]="transactions$ | async">
-  </bb-transaction-list>
+  </app-transaction-list>
 </div>

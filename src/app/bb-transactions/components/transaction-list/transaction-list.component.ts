@@ -5,7 +5,7 @@ import { debounceTime, distinctUntilChanged, map, startWith } from 'rxjs/operato
 import { Transaction } from '../../models';
 
 @Component({
-  selector: 'bb-transaction-list',
+  selector: 'app-transaction-list',
   templateUrl: './transaction-list.component.html',
   styleUrls: ['./transaction-list.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
